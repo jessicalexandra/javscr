@@ -31,3 +31,12 @@ function updateRecord(id, name, age) {
 function deleteRecord(id) {
     database = database.filter(record => record.id !== id);
 }
+const nombre=document.getElementById("nombre")
+const edad=document.getElementById("edad")
+document.getElementById("Guardar").addEventListener("click",function(e){
+    e.preventDefault();
+    createRecord(nombre.value, edad.value)
+    console.log(database)
+})
+
+
